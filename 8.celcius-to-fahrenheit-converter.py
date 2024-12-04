@@ -1,8 +1,6 @@
-celcius = float(input("Enter celcius: "))
+celcius = float(input("Enter temperature in Celcius: "))
 
 # Conversion formula: (Celcius * 9/5) +32
-fahrenheit = 0.621371
+fahrenheit = (celcius * 9/5) + 32
 
-miles = km * conv
-
-print(f"{km} kilometers is equal to {miles} miles")
+print(f"{celcius} degree Celcius is equal to {fahrenheit} degree Fahrenheit")
