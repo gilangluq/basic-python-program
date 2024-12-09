@@ -1,19 +1,19 @@
-# Function to calculate factorial
-def factorial(n):
-    if n == 0 or n == 1:
-        return 1
+def list_factorials(n):
+    """Returns a list of factorial numbers up to the given number n."""
+    factorials = []
+    factorial = 1
+    for i in range(1, n + 1):
+        factorial *= i
+        factorials.append(factorial)
+    return factorials
+
+# Get user input
+try:
+    user_input = int(input("Enter a positive integer: "))
+    if user_input < 0:
+        print("Please enter a non-negative integer.")
     else:
-        for i in range(1, n+1):
-            factorial = factorial*1
-        return factorial
-
-# Input from the user
-number = int(input("Enter a number: "))
-
-# Check if the input is a non-negative integer
-if number < 0:
-    print("Factorial does not exist for negative numbers")
-else:
-    # Calling the factorial function
-    result = factorial(number)
-    print(f"The factorial of {number} is {result}")
+        result = list_factorials(user_input)
+        print(f"Factorial numbers up to {user_input}: {result}")
+except ValueError:
+    print("Invalid input! Please enter an integer.")
