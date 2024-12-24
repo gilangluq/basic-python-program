@@ -1,6 +1,6 @@
 def calculate_bmi(weight, height):
-    """Function to calculate BMI given weight in kg and height in meters."""
-    return weight / (height ** 2)
+    """Function to calculate BMI given weight in kg and height in centimeters."""
+    return weight / ((height/100) ** 2)
 
 def bmi_category(bmi):
     """Determine BMI category."""
