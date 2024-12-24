@@ -16,7 +16,7 @@ def bmi_category(bmi):
 # Prompt user for input
 try:
     weight = float(input("Enter your weight in kilograms (kg): "))
-    height = float(input("Enter your height in meters (m): "))
+    height = float(input("Enter your height in centimeters (cm): "))
     
     if weight <= 0 or height <= 0:
         print("Weight and height must be positive numbers.")
